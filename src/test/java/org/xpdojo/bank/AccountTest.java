@@ -6,12 +6,19 @@ import static org.assertj.core.api.Assertions.*;
 
 public class AccountTest {
 
-
     @Test
     public void newAccountShouldHave0Balance() {
 
         Account acc = new Account();
         assertThat(acc.balance()).isEqualTo(0);
+
+    }
+
+    @Test
+    public void depositingAmountShouldIncreaseBalance() {
+        Account acc = new Account();
+        acc.deposit(10);
+        assertThat(acc.balance()).isEqualTo(10);
 
     }
 }
