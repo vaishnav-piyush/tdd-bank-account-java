@@ -19,6 +19,14 @@ public class AccountTest {
         Account acc = new Account();
         acc.deposit(10);
         assertThat(acc.balance()).isEqualTo(10);
-
     }
+
+    @Test
+    public void multipleDepositsShouldAddUpInBalance() {
+        Account acc = new Account();
+        acc.deposit(10);
+        acc.deposit(20);
+        assertThat(acc.balance()).isEqualTo(30);
+    }
+
 }

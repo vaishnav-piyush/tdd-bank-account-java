@@ -9,6 +9,6 @@ public class Account {
     }
 
     public void deposit(int amount) {
-        this.balance = amount;
+        this.balance += amount;
     }
 }
