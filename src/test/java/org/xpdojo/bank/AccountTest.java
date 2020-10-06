@@ -29,11 +29,10 @@ public class AccountTest {
 
     @Test
     public void withdrawFromAccountReflectsInBalance() {
-        Account acc = Account.emptyAccount();
-        acc.deposit(10);
+        Account acc = Account.accountWithInitialDeposit(10);
         acc.withdraw(8);
         assertThat(acc.balance()).isEqualTo(2);
     }
-    
+
 
 }
