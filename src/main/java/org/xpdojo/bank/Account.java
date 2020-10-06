@@ -25,6 +25,9 @@ public class Account {
     }
 
     public void withdraw(int amount) {
-        this.balance -= amount;
+        if(amount <= balance)
+            this.balance -= amount;
+        else
+            throw new RuntimeException("Disallowed operation");
     }
 }
